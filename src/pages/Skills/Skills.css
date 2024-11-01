@@ -1,0 +1,37 @@
+.skills .overview-box {
+    width: 960;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.skills .overview-line {
+    color: #d1d1d1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.skills .overview-line-tag {
+    color: #1d1d1d;
+    background-color: #d1d1d1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 13px;
+    cursor: default;
+    transition-duration: 0.4s;
+}
+
+.skills .overview-line-tag:hover {
+    background-color: white;
+}
+
+.skills .big-title {
+    font-size: 40px;
+    font-weight: bold;
+}

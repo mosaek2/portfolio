@@ -1,0 +1,14 @@
+.highlight {
+    height: 44px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.highlight:hover .h {
+    color: #e90101;
+}
+
+.h {
+    transition-duration: 0.4s;
+}
