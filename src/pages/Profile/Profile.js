@@ -6,7 +6,7 @@ import Title from '../../components/Title/Title';
 import './Profile.css';
 
 export default function Profile() {
-    const [targetCompany] = useState('target company');
+    const [targetCompany] = useState('web dev company');
     const expandTimer = 1000;
     const typeTimer = 2000;
     const typeSpeed = 100;
