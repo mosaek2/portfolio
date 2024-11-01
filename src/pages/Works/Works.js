@@ -35,7 +35,7 @@ export default function Works() {
                 <div className='detail-content-container'>
                     <FadeIn>
                         <p className='big-title'>
-                            빈티지샵 개인 프로젝트
+                            빈티지샵 프로젝트 (개인 프로젝트)
                         </p>
                     </FadeIn>
 
@@ -171,7 +171,7 @@ export default function Works() {
                 <div className='detail-content-container'>
                     <FadeIn>
                         <p className='big-title'>
-                            레오폴드 3인 팀 프로젝트
+                            레오폴드 프로젝트 (3인 팀 프로젝트)
                         </p>
                     </FadeIn>
 
@@ -313,7 +313,7 @@ export default function Works() {
                 <div className='detail-content-container'>
                     <FadeIn>
                         <p className='big-title'>
-                            포트폴리오 개인 프로젝트
+                            포트폴리오 (개인 프로젝트)
                         </p>
                     </FadeIn>
 
@@ -400,7 +400,7 @@ export default function Works() {
             <Main page='works'>
                 <FadeIn>
                     <div className='titleAlt'>
-                        <p>빈티지샵 개인 프로젝트</p>
+                        <p>빈티지샵 프로젝트 (개인 프로젝트)</p>
                         <p
                             className='titleAlt-detail'
                             onClick={() => {
@@ -457,7 +457,7 @@ export default function Works() {
 
                 <FadeInAlt marginTop={253}>
                     <div className='titleAlt'>
-                        <p>레오폴드 3인 팀 프로젝트</p>
+                        <p>레오폴드 프로젝트 (3인 팀 프로젝트)</p>
                         <p
                             className='titleAlt-detail'
                             onClick={() => {
@@ -515,7 +515,7 @@ export default function Works() {
 
                 <FadeIn marginTop={253}>
                     <div className='titleAlt'>
-                        <p>포트폴리오 개인 프로젝트</p>
+                        <p>포트폴리오 (개인 프로젝트)</p>
                         <p
                             className='titleAlt-detail'
                             onClick={() => {
