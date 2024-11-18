@@ -1,9 +1,5 @@
-import './Highlight.css';
+import "./Highlight.css";
 
 export default function Highlight({ children }) {
-    return (
-        <div className='highlight'>
-            {children}
-        </div>
-    )
+  return <div className="highlight">{children}</div>;
 }
