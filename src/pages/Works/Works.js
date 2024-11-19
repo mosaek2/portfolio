@@ -8,16 +8,17 @@ import "./Works.css";
 export default function Works() {
   const [isBlur, setIsBlur] = useState(false);
   const [vintage, setVintage] = useState(false);
+  const [vintageAlt, setVintageAlt] = useState(false);
   const [leopold, setLeopold] = useState(false);
   const [portfolio, setPortfolio] = useState(false);
 
   useEffect(() => {
-    if (vintage || leopold || portfolio) {
+    if (vintage || vintageAlt || leopold || portfolio) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-  }, [vintage, leopold, portfolio]);
+  }, [vintage, vintageAlt, leopold, portfolio]);
 
   return (
     <div className="works">
@@ -26,11 +27,13 @@ export default function Works() {
         onClick={() => {
           setIsBlur(false);
           setVintage(false);
+          setVintageAlt(false);
           setLeopold(false);
           setPortfolio(false);
         }}
       />
 
+      {/**************************** 프로젝트 상세 정보 ****************************/}
       <div className={`detail ${vintage ? "visible" : ""}`}>
         <div className="detail-content-container">
           <FadeIn>
@@ -78,7 +81,9 @@ export default function Works() {
             <div className="overview-box">
               <div className="overview-line">
                 <p>front-end:</p>
-                <p className="overview-line-tag">HTML, CSS, JS</p>
+                <p className="overview-line-tag">HTML</p>
+                <p className="overview-line-tag">CSS</p>
+                <p className="overview-line-tag">JavaScript</p>
                 <p className="overview-line-tag">React</p>
                 <p className="overview-line-tag">Figma</p>
               </div>
@@ -203,6 +208,168 @@ export default function Works() {
         </div>
       </div>
 
+      <div className={`detail ${vintageAlt ? "visible" : ""}`}>
+        <div className="detail-content-container">
+          <FadeIn>
+            <p className="big-title">
+              Angular로 구현한 빈티지샵 프로젝트 (개인 프로젝트)
+            </p>
+          </FadeIn>
+
+          <FadeIn marginTop={200}>
+            <Title text={"summary"} width={960} />
+            <div className="detail-content">
+              <p>
+                Angular를 사용하여 중고 의류를 판매하는 쇼핑몰 플랫폼을 제작한
+                개인 프로젝트입니다. 초기에는 100개 이상의 상품을 트리 구조로
+                분류해 조회 기능을 구현했지만, 카테고리 추가나 수정 시 많은 코드
+                변경이 필요하다는 지적을 받았습니다.
+              </p>
+              <p>
+                이를 계기로 객체지향적 설계를 적용하여 카테고리 관리 로직을
+                재구성하고, 유지보수성과 확장성을 크게 개선했습니다. 또한 기존
+                프로젝트를 분석하면서 발견한 불편한 요소들을 개선하고, 사용자
+                경험을 높일 수 있도록 UI/UX를 설계 하고 적용했습니다.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn marginTop={200}>
+            <Title text={"features"} width={960} />
+          </FadeIn>
+          <FadeIn>
+            <div className="detail-content">
+              <p>
+                회원가입 / 로그인 확인 / 카테고리별 상품 조회 / 상품 상세 조회 /
+                공지사항 및 Q&A 조회
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn marginTop={180}>
+            <Title text={"skills"} width={960} />
+          </FadeIn>
+          <FadeIn>
+            <div className="overview-box">
+              <div className="overview-line">
+                <p>front-end:</p>
+                <p className="overview-line-tag">HTML</p>
+                <p className="overview-line-tag">CSS</p>
+                <p className="overview-line-tag">TypeScript</p>
+                <p className="overview-line-tag">Angular</p>
+                <p className="overview-line-tag">Figma</p>
+              </div>
+
+              <div className="overview-line">
+                <p>back-end:</p>
+                <p className="overview-line-tag">Java</p>
+                <p className="overview-line-tag">MariaDB</p>
+                <p className="overview-line-tag">Spring Boot</p>
+                <p className="overview-line-tag">MyBatis</p>
+              </div>
+
+              <div className="overview-line">
+                <p>others:</p>
+                <p className="overview-line-tag">Git</p>
+                <p className="overview-line-tag">GitHub</p>
+                <p className="overview-line-tag">AWS</p>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn marginTop={180}>
+            <Title text={"highlights"} width={960} />
+          </FadeIn>
+          <FadeIn>
+            <div className="detail-content">
+              <img
+                src=".\images\highlight-vintage-alt-1.png"
+                alt="highlight-vintage-alt-1"
+                width={594}
+                height={200}
+              />
+              <p>
+                카테고리 시스템은 category.service.ts에 정의된 데이터를 기반으로
+                동작하도록 설계하여, 새로운 카테고리를 추가하거나 삭제할 때 코드
+                수정 없이 자동으로 화면에 반영되도록 구현했고, 큰 구조 변경
+                시에도 최소한의 수정만으로 대응할 수 있도록 했습니다.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <div className="detail-content">
+              <img
+                src=".\images\highlight-vintage-alt-2.png"
+                alt="highlight-vintage-alt-2"
+                width={551}
+                height={200}
+              />
+              <p>
+                카테고리를 select 태그로 표현해 트리 구조를 쉽게 파악하도록
+                했으며, 상품 목록 페이지와 상세 정보 페이지를 오갈 때 스크롤
+                위치 복원 기능을 적절히 설정하여 사용자 편의성을 높였습니다.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn marginTop={200}>
+            <Title text={"links"} width={960} />
+          </FadeIn>
+          <FadeIn>
+            <div className="detail-content">
+              <p>
+                사이트 주소:&nbsp;
+                <span className="url">
+                  <a
+                    href="http://43.202.1.84:3000/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    http://43.202.1.84:3000/
+                  </a>
+                </span>
+              </p>
+              <p>
+                GitHub:&nbsp;
+                <span className="url">
+                  <a
+                    href="https://github.com/mosaek2/vintage-alt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://github.com/mosaek2/vintage-alt
+                  </a>
+                </span>
+              </p>
+              <p>
+                디자인:&nbsp;
+                <span className="url">
+                  <a
+                    href="https://www.figma.com/design/AiDv6aqRGlRke5PPOFmxNg/vintage-alt?node-id=0-1&t=LkPWfao6VHSQTH9D-0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://www.figma.com/design/
+                  </a>
+                </span>
+              </p>
+              <p>
+                DB 구조:&nbsp;
+                <span className="url">
+                  <a
+                    href="https://www.erdcloud.com/d/79WYc3vYxQtf3Zt5k"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://www.erdcloud.com/d/
+                  </a>
+                </span>
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+
       <div className={`detail ${leopold ? "visible" : ""}`}>
         <div className="detail-content-container">
           <FadeIn>
@@ -262,7 +429,9 @@ export default function Works() {
             <div className="overview-box">
               <div className="overview-line">
                 <p>front-end:</p>
-                <p className="overview-line-tag">HTML, CSS, JS</p>
+                <p className="overview-line-tag">HTML</p>
+                <p className="overview-line-tag">CSS</p>
+                <p className="overview-line-tag">JavaScript</p>
                 <p className="overview-line-tag">React</p>
                 <p className="overview-line-tag">Figma</p>
               </div>
@@ -277,7 +446,8 @@ export default function Works() {
 
               <div className="overview-line">
                 <p>others:</p>
-                <p className="overview-line-tag">Git, GitHub</p>
+                <p className="overview-line-tag">Git</p>
+                <p className="overview-line-tag">GitHub</p>
                 <p className="overview-line-tag">AWS</p>
               </div>
             </div>
@@ -431,7 +601,9 @@ export default function Works() {
             <div className="overview-box">
               <div className="overview-line">
                 <p>front-end:</p>
-                <p className="overview-line-tag">HTML, CSS, JS</p>
+                <p className="overview-line-tag">HTML</p>
+                <p className="overview-line-tag">CSS</p>
+                <p className="overview-line-tag">JavaScript</p>
                 <p className="overview-line-tag">React</p>
                 <p className="overview-line-tag">Figma</p>
               </div>
@@ -501,6 +673,7 @@ export default function Works() {
           </FadeIn>
         </div>
       </div>
+      {/**************************** 프로젝트 상세 정보 ****************************/}
 
       <Main page="works">
         <FadeIn>
@@ -565,6 +738,62 @@ export default function Works() {
 
         <FadeInAlt marginTop={253}>
           <div className="titleAlt">
+            <p>Angular로 구현한 빈티지 프로젝트 (개인 프로젝트)</p>
+            <p
+              className="titleAlt-detail"
+              onClick={() => {
+                setIsBlur(true);
+                setVintageAlt(true);
+              }}
+            >
+              프로젝트 상세 정보 &gt;
+            </p>
+          </div>
+
+          <div className="overview">
+            <img
+              src=".\images\vintage-alt.gif"
+              width={392}
+              height={211}
+              alt="vintage-alt"
+            />
+            <div className="overview-text">
+              <p>개발 기간: 2024.11.6 - 2024.11.18 (12d)</p>
+              <p>
+                사이트 주소:&nbsp;
+                <span className="url">
+                  <a
+                    href="http://43.202.1.84:3000/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    http://43.202.1.84:3000/
+                  </a>
+                </span>
+              </p>
+              <p>
+                GitHub:&nbsp;
+                <span className="url">
+                  <a
+                    href="https://github.com/mosaek2/vintage-alt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://github.com/mosaek2/vintage-alt
+                  </a>
+                </span>
+              </p>
+              <p></p>
+              <p>
+                Angular와 TypeScript를 활용해 구현한 중고 의류 쇼핑몰입니다.
+              </p>
+              <p>기존 빈티지 프로젝트의 문제점을 개선했습니다.</p>
+            </div>
+          </div>
+        </FadeInAlt>
+
+        <FadeIn marginTop={253}>
+          <div className="titleAlt">
             <p>레오폴드 프로젝트 (3인 팀 프로젝트)</p>
             <p
               className="titleAlt-detail"
@@ -622,7 +851,7 @@ export default function Works() {
               <p>게시판과 쇼핑몰로 구성되어 있습니다.</p>
             </div>
           </div>
-        </FadeInAlt>
+        </FadeIn>
 
         <FadeIn marginTop={253}>
           <div className="titleAlt">
