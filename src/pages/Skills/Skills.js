@@ -15,8 +15,12 @@ export default function Skills() {
           <div className="overview-box">
             <div className="overview-line">
               <p>front-end:</p>
-              <p className="overview-line-tag">HTML, CSS, JS</p>
               <p className="overview-line-tag">React</p>
+              <p className="overview-line-tag">Angular</p>
+              <p className="overview-line-tag">HTML</p>
+              <p className="overview-line-tag">CSS</p>
+              <p className="overview-line-tag">JavaScript</p>
+              <p className="overview-line-tag">TypeScript</p>
               <p className="overview-line-tag">Figma</p>
             </div>
 
@@ -32,7 +36,8 @@ export default function Skills() {
             <div className="overview-line">
               <p>others:</p>
               <p className="overview-line-tag">C</p>
-              <p className="overview-line-tag">Git, GitHub</p>
+              <p className="overview-line-tag">Git</p>
+              <p className="overview-line-tag">GitHub</p>
               <p className="overview-line-tag">AWS</p>
             </div>
           </div>
